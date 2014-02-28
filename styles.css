@@ -1,0 +1,18 @@
+.img-wrapper{
+    display: block;
+    position: relative;
+    width: 300px;
+}
+.img-wrapper img{
+    max-width: 100%;
+    display: block;
+}
+.img-wrapper :nth-child(2){
+    display: none;
+}
+.img-wrapper:hover :nth-child(2){
+    display: block;
+}
+.img-wrapper:hover :first-child{
+    display: none;
+}

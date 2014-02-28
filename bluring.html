@@ -1,0 +1,34 @@
+<body>
+  <head>
+    <script src='StackBlur.js'></script>
+    <link rel='stylesheet' href='styles.css' type='text/css'>
+  </head>
+  <div class='img-wrapper'>
+    <img id='srcimg' src='cats.jpg' data-blur=20 >
+  </div>
+  <div class='img-wrapper'>
+    <img id='srcimg' src='cats.jpg' data-blur=20 >
+  </div>
+  <script>
+
+
+    function blurIt (e) {
+
+      var images = document.querySelectorAll('img[data-blur]')
+
+      for (var i = 0, img; img = images[i++];) {
+        var c      = document.createElement('canvas')
+          , blured = document.createElement('img')
+
+        stackBlurImage(img, c, 20, false)
+        blured.src = c.toDataURL()
+
+        img.parentElement.appendChild(blured)
+      }
+
+    }
+
+    document.addEventListener('DOMContentLoaded', blurIt, false)
+  </script>
+
+</body>
