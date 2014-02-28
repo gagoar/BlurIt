@@ -28,27 +28,26 @@ Thes library takes magic attributes from each image tag and produce blur!
   blured image
 
  ``` html
-  <image src='someIamge' data-blurit data-blurit-transform='append' dat>
+  <image src='someIamge' data-blurit data-blurit-transform='append' data-blurit-radius=50>
  ```
 
 - Algorithm
   All the credit goes to http://www.quasimondo.com/StackBlurForCanvas/StackBlurDemo.html
 
-= Development
+- Development
 
-- Install dependencies
- ```` bash
-  npm install
- ````
-- Run server for development
- 
- ``` bash 
-  npm start
+ - Install dependencies
+  ```` bash
+   npm install
+  ````
+ - Run server for development
+
+  ``` bash
+   npm start
+  ```
+
+ - Build the library
+
+ ``` bash
+ npm run-script build
  ```
-
-- Build the library
-
-``` bash
-npm run-script build
-
-```
