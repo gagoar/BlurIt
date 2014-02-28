@@ -1,0 +1,22 @@
+{
+  "name": "BlurIt",
+  "version": "1.0.0",
+  "description": "BlurIt!",
+  "main": "index.js",
+  "readme": "REAMDE.md",
+  "repository": "git@github.com:gagoar/BlurIt.git",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "~2.36.0",
+    "uglify-js": "~2.3.6",
+    "watchify": "~0.4.1",
+    "beefy": "~1.1.0",
+    "envify": "~1.2.0"
+  },
+  "scripts": {
+    "start": "beefy index.js:build/BlurIt.js --live",
+    "build": "browserify index.js | uglifyjs > dist/BlurIt.min.js"
+  },
+  "author": "Gago",
+  "license": "Pending.."
+}

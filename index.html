@@ -1,31 +1,29 @@
-<body>
+<!DOCTYPE html>
+<html>
   <head>
-    <link rel='stylesheet' href='styles.css' type='text/css'>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <title>BlurIt!</title>
+    <link rel="stylesheet" href="demo/css/style.css" />
   </head>
-  <div class='img-wrapper'>
-    <img id='srcimg' src='cats.jpg' data-blur=20 >
-  </div>
-  <div class='img-wrapper'>
-    <img id='srcimg' src='cats.jpg' data-blur=20 >
-  </div>
-  <script>
+  <body>
+    <div>
+      <img src="http://placekitten.com/g/200/300" crossOrigin="anonymous" data-blurit data-blurit-transform='replace'>
+    </div>
+    <div class='img-wrapper'>
+      <img src="http://placekitten.com/g/200/400" crossOrigin="anonymous" data-blurit data-blurit-transform='append'>
+    </div>
+    <div class='img-wrapper'>
+      <img src="http://placekitten.com/g/200/500" crossOrigin="anonymous" data-blurit data-blurit-transform='append'>
+    </div>
+    <div class='img-wrapper'>
+      <img src="http://placekitten.com/g/100/300" crossOrigin="anonymous" data-blurit data-blurit-transform='append'>
+    </div><div class='img-wrapper'>
+      <img src="http://placekitten.com/g/300/300" crossOrigin="anonymous" data-blurit data-blurit-transform='append'>
+    </div>
+    <div class='img-wrapper'>
+      <img src="http://placekitten.com/g/700/300" crossOrigin="anonymous" data-blurit data-blurit-transform='append'>
+    </div>
 
-
-    function blurIt (e) {
-
-        var c      = document.createElement('canvas')
-          , blured = document.createElement('img')
-
-        stackBlurImage(this, c, 20, false)
-        blured.src = c.toDataURL()
-
-        this.parentElement.appendChild(blured)
-    }
-
-    for (var i = 0, images = document.images, img; img = images[i++];) {
-      img.onload =  blurIt
-    }
-  </script>
-  <script src='StackBlur.js'></script>
-
-</body>
+    <script src="build/BlurIt.js"></script>
+  </body>
+</html>
