@@ -14,21 +14,21 @@ Thes library takes magic attributes from each image tag and produce blur!
 
  all the attributes are related with img tag elements
 
- `data-blurit` : if the tag don't have these attribute will beignored
+ `data-blurit`: if the tag don't have these attributes will be ignored
 
- `data-blurit-transofrm`: ['append'|| 'replace'] alter the dom producing in each
+ `data-blurit-transform`: ['append'||'replace'] alter the dom producing in each
   case the expected change.
 
  `data-blurit-callback` : after process we call the callback function
   with the following arguments: [ image, canvas, dataURL ]
 
- `data-blurit-transform='replace' data-blurit-onimg` : [id of an image element] it replace a different tag.
+ `data-blurit-transform='replace' data-blurit-onimg`: [id of an image element] it replace a different tag.
 
  `data-blurit-radius` : [number || 20] to alter the radius applied to the
   blured image
 
  ``` html
-  <image src='someIamge' data-blurit data-blurit-transform='append' data-blurit-radius=50>
+  <image src='someImage' data-blurit data-blurit-transform='append' data-blurit-radius=50>
  ```
 
 - Algorithm
