@@ -39,5 +39,5 @@ var BlurMath  = require('./src/BlurMath')
     if (img.complete)
       process(img)
     else
-      img.onload = callback
+      img.onload = handelEvent
   }
