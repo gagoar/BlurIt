@@ -1,6 +1,5 @@
 <body>
   <head>
-    <script src='StackBlur.js'></script>
     <link rel='stylesheet' href='styles.css' type='text/css'>
   </head>
   <div class='img-wrapper'>
@@ -14,21 +13,21 @@
 
     function blurIt (e) {
 
-      var images = document.querySelectorAll('img[data-blur]')
-
-      for (var i = 0, img; img = images[i++];) {
         var c      = document.createElement('canvas')
           , blured = document.createElement('img')
 
-        stackBlurImage(img, c, 20, false)
+        stackBlurImage(this, c, 20, false)
         blured.src = c.toDataURL()
 
-        img.parentElement.appendChild(blured)
-      }
-
+        this.parentElement.appendChild(blured)
     }
 
-    document.addEventListener('DOMContentLoaded', blurIt, false)
+    document.addEventListener('DOMcontentloaded', function (){
+      for (var i = 0, images = document.images, img; img = images[i++];)
+        img.onload =  blurIt
+    }
+    )
   </script>
+  <script src='StackBlur.js'></script>
 
 </body>
